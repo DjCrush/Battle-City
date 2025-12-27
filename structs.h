@@ -1,0 +1,13 @@
+#ifndef STRUCTS_H
+#define STRUCTS_H
+
+typedef enum
+{
+	DIRECTION_UP,
+	DIRECTION_LEFT,
+	DIRECTION_DOWN,
+	DIRECTION_RIGHT
+} DIRECTION;
+
+#endif // !STRUCTS_H
+
