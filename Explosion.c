@@ -1,5 +1,8 @@
 #include "Explosion.h"
 
+extern SDL_Renderer* pRenderer;
+extern SDL_Texture* pTiles;
+
 void AddExplosion(LinkedList* linkedlist, int x, int y)
 {
 	Explosion* explosion = (Explosion*)malloc(sizeof(Explosion));
@@ -14,7 +17,7 @@ void AddExplosion(LinkedList* linkedlist, int x, int y)
 	}
 }
 
-void ExplosionsUpdate(LinkedList* linkedlist)
+void UpdateExplosions(LinkedList* linkedlist)
 {
 	Node* curNode = linkedlist->head;
 	while (curNode)

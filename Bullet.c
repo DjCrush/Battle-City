@@ -52,7 +52,7 @@ void AddBullet(LinkedList* linkedlist, void* entity, int type)
 	}
 }
 
-void BulletsUpdate(LinkedList* bulletslist, LinkedList* explosionslist, int level[][26])
+void UpdateBullets(LinkedList* bulletslist, LinkedList* explosionslist, int level[][26])
 {
 	Node* curNode = bulletslist->head;
 	while (curNode)

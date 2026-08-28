@@ -7,12 +7,11 @@
 #include "Bullet.h"
 #include "Explosion.h"
 
-#define STEP_ENEMY 1
-
-extern SDL_Renderer* pRenderer;
-extern SDL_Texture* pTiles;
+#define SPEED_ENEMY 1
 
 typedef struct {
+	bool Star;
+	float Time;
 	int x;
 	int y;
 	int ID;
@@ -21,9 +20,9 @@ typedef struct {
 } Enemy;
 
 void AddEnemy(LinkedList* linkedlist, int ID);
-void EnemyUpdate(LinkedList* linkedlist);
+void UpdateEnemies(LinkedList* linkedlist, int level[][26]);
 void DrawEnemies(LinkedList* linkedlist);
-void checkCollision(LinkedList* enemies, LinkedList* bullets, LinkedList* explosionslist);
+void CheckCollisions(LinkedList* enemies, LinkedList* bullets, LinkedList* explosionslist);
 
 #endif // !ENEMY_H
 

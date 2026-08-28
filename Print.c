@@ -1,4 +1,5 @@
 #include "Print.h"
+#include <SDL3/sdl.h>
 
 void Print(int coordX, int coordY, const char* text, int inverse)
 {
@@ -7,7 +8,7 @@ void Print(int coordX, int coordY, const char* text, int inverse)
 		int charX = (text[i] - 32) % 32;
 		int charY = (text[i] - 32) / 32 + inverse * 3;
 		SDL_FRect r1 = { charX << 3, charY << 3, 8, 8 };
-		SDL_FRect r2 = { i * 32 + coordX, coordY, 32, 32 };
+		SDL_FRect r2 = { i * 16 + coordX, coordY, 16, 16 };
 		SDL_RenderTexture(pRenderer, pFont, &r1, &r2);
 	}
 }

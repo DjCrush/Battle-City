@@ -9,7 +9,6 @@
 #include "LinkedList.h"
 
 
-#define SPEED_BULLET 4
 
 extern SDL_Renderer* pRenderer;
 extern SDL_Texture* pTiles;
@@ -24,7 +23,7 @@ typedef struct {
 
 
 void AddBullet(LinkedList* linkedlist, void* entity, int type);
-void BulletsUpdate(LinkedList* bulletslist, LinkedList* explosionslist, int level[][26]);
+void UpdateBullets(LinkedList* bulletslist, LinkedList* explosionslist, int level[][26]);
 void DrawBullets(LinkedList* linkedlist);
 
 #endif // 
